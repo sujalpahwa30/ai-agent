@@ -1,6 +1,7 @@
 import { StreamChat } from "stream-chat";
 import { apiKey, serverClient } from "../serverClient";
 import { AgentPlatform, AIAgent } from "./types";
+import { OpenAIAgent } from "./openai/OpenAIAgent";
 
 export const createAgent = async (
     user_id: string,
@@ -21,6 +22,7 @@ export const createAgent = async (
     switch(platform) {
         case AgentPlatform.WRITING_ASSISTANT:
         case AgentPlatform.OPENAI:
+            return new OpenAIAgent(chatClient, channel);
 
         default:
             throw new Error(`Unsupported agent platform: ${platform}`);
