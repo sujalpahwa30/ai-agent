@@ -21,7 +21,7 @@
     "dotenv": "^17.2.1",
     "express": "^4.21.2",
     "openai": "^4.104.0",
-    "stream-chat": "^9.17.0"
+    "stream-chat": "^8.60.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",

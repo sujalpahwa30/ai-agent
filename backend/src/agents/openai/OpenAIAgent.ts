@@ -1,6 +1,5 @@
 import OpenAI from "openai";
-import type { Channel, Event, StreamChat } from "stream-chat";
-import type { DefaultGenerics } from "stream-chat/dist/types";
+import type { Channel, DefaultGenerics, Event, StreamChat } from "stream-chat";
 import type { AIAgent } from "../types";
 import { OpenAIResponseHandler } from "./OpenAIResponseHandler";
 
@@ -162,3 +161,4 @@ export class OpenAIAgent implements AIAgent {
         );
     };
 }
+
