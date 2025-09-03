@@ -3,6 +3,7 @@ import { Login } from "../src/components/login";
 import { ThemeProvider } from "./providers/theme-provider";
 import { useState } from "react";
 import { type User } from "stream-chat";
+import { Toaster } from "./components/ui/toaster";
 
 const USER_STORAGE_KEY = "chat-ai-app-user";
 
@@ -31,6 +32,8 @@ function App() {
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <div className="h-screen bg-background">
         <Login onLogin={handleLogout} />
+
+        <Toaster />
       </div>
     </ThemeProvider>
   )
